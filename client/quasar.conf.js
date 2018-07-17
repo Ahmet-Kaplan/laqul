@@ -27,10 +27,6 @@ module.exports = function (ctx) {
       'fontawesome'
     ],
     supportIE: true,
-    vendor: {
-      add: [],
-      remove: []
-    },
     build: {
       scopeHoisting: true,
       vueRouterMode: 'history',
@@ -116,7 +112,8 @@ module.exports = function (ctx) {
     animations: [
     ],
     pwa: {
-      cacheExt: 'js,html,css,ttf,eot,otf,woff,woff2,json,svg,gif,jpg,jpeg,png,wav,ogg,webm,flac,aac,mp4,mp3',
+      // workboxPluginMode: 'InjectManifest',
+      // workboxOptions: {},
       manifest: {
         name: 'Laqul App',
         short_name: 'Laqul-PWA',
@@ -158,10 +155,13 @@ module.exports = function (ctx) {
       // id: 'org.cordova.quasar.app'
     },
     electron: {
+      // bundler: 'builder', // or 'packager'
       extendWebpack (cfg) {
-        // do something with cfg
+        // do something with Electron process Webpack cfg
       },
       packager: {
+        // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
+
         // OS X / Mac App Store
         // appBundleId: '',
         // appCategoryType: '',
@@ -170,10 +170,12 @@ module.exports = function (ctx) {
 
         // Window only
         // win32metadata: { ... }
-      }
-    },
+      },
+      builder: {
+        // https://www.electron.build/configuration/configuration
 
-    // leave this here for Quasar CLI
-    starterKit: '1.0.2'
+        // appId: 'quasar-app'
+      }
+    }
   }
 }
