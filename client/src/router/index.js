@@ -5,20 +5,23 @@ import routes from './routes'
 
 Vue.use(VueRouter)
 
-const Router = new VueRouter({
-  /*
-   * NOTE! Change Vue Router mode from quasar.conf.js -> build -> vueRouterMode
-   *
-   * If you decide to go with "history" mode, please also set "build.publicPath"
-   * to something other than an empty string.
-   * Example: '/' instead of ''
-   */
+export default function ({ store }) {
+  const Router = new VueRouter({
+    scrollBehavior: () => ({ y: 0 }),
+    routes,
 
-  // Leave as is and change from quasar.conf.js instead!
-  mode: process.env.VUE_ROUTER_MODE,
-  base: process.env.VUE_ROUTER_BASE,
-  scrollBehavior: () => ({ y: 0 }),
-  routes
-})
+    // Leave these as is and change from quasar.conf.js instead!
+    mode: process.env.VUE_ROUTER_MODE,
+    base: process.env.VUE_ROUTER_BASE
+  })
 
-export default Router
+  Router.beforeEach((to, from, next) => {
+    if (to.meta) {
+      store.commit('showcase/updatePageMeta', to.meta)
+    }
+
+    next()
+  })
+
+  return Router
+}

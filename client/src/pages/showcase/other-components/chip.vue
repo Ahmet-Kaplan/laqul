@@ -1,0 +1,170 @@
+<template>
+  <q-page padding class="docs-chip row justify-center">
+    <div style="width: 500px; max-width: 90vw;">
+      <p class="caption">Basic Label Chips</p>
+      <p>
+        <q-chip icon="alarm" color="primary">
+          q-chip
+        </q-chip>
+        <q-chip icon-right="alarm" color="primary">
+          q-chip
+        </q-chip>
+      </p>
+      <p>
+        <q-chip color="primary">q-chip</q-chip>
+        <q-chip color="secondary" class="shadow-1">10k</q-chip>
+        <q-chip small color="secondary" class="shadow-1">10k</q-chip>
+        <q-chip dense color="secondary" class="shadow-1">10k</q-chip>
+        <q-chip icon="alarm" color="primary">
+          q-chip
+        </q-chip>
+        <q-chip icon-right="alarm" color="primary">
+          q-chip
+        </q-chip>
+        <q-chip icon="alarm" icon-right="alarm" color="primary">
+          q-chip
+        </q-chip>
+        <q-chip color="secondary" class="shadow-1">10k</q-chip>
+      </p>
+      <p>
+        <q-chip square color="primary">q-chip</q-chip>
+        <q-chip square color="secondary" class="shadow-1">10k</q-chip>
+        <q-chip square small color="secondary" class="shadow-1">10k</q-chip>
+        <q-chip square dense color="secondary" class="shadow-1">10k</q-chip>
+        <q-chip square icon="alarm" color="primary">
+          q-chip
+        </q-chip>
+        <q-chip icon-right="alarm" square color="primary">
+          q-chip
+        </q-chip>
+        <q-chip square icon="alarm" icon-right="alarm" color="primary">
+          q-chip
+        </q-chip>
+        <q-chip square color="secondary" class="shadow-1">10k</q-chip>
+      </p>
+
+      <p class="caption">Floating Label Chips</p>
+      <p>
+        <q-btn push color="white" text-color="primary" label="Emails">
+          <q-chip floating color="primary">22</q-chip>
+        </q-btn>
+        &nbsp;&nbsp;
+        <q-btn color="red" label="Inbox">
+          <q-chip floating color="dark">22</q-chip>
+        </q-btn>
+        &nbsp;&nbsp;
+        <q-btn color="primary" label="Alerts">
+          <q-chip floating color="grey-2" text-color="primary">22</q-chip>
+        </q-btn>
+        &nbsp;&nbsp;
+        <q-btn round dense color="dark" icon="announcement">
+          <q-chip floating color="red">22</q-chip>
+        </q-btn>
+        &nbsp;&nbsp;
+        <q-btn round dense color="primary" icon="map">
+          <q-chip floating color="red">1</q-chip>
+        </q-btn>
+      </p>
+
+      <p class="caption">Advanced Label Chips</p>
+      <div class="group">
+        <q-chip avatar="statics/boy-avatar.png" color="grey-4" text-color="black">John</q-chip>
+        <q-chip avatar="statics/boy-avatar.png" color="teal">Joe</q-chip>
+        <q-chip avatar="statics/boy-avatar.png" color="black">Jim</q-chip>
+        <q-chip avatar="statics/boy-avatar.png" small color="teal">Joe</q-chip>
+        <br>
+        <q-chip avatar="statics/boy-avatar.png" closable color="light" text-color="black">John</q-chip>
+        <q-chip avatar="statics/boy-avatar.png" closable color="red">Joe</q-chip>
+        <q-chip avatar="statics/boy-avatar.png" small closable color="red">Joe</q-chip>
+        <q-chip avatar="statics/boy-avatar.png" dense closable color="red">Joe</q-chip>
+        <br>
+        <q-chip color="grey-4" text-color="black">John</q-chip>
+        <q-chip color="teal">Joe</q-chip>
+        <q-chip color="black">Jim</q-chip>
+        <q-chip square color="primary">Jim</q-chip>
+        <q-chip small color="teal">Joe</q-chip>
+        <q-chip dense color="teal">Joe</q-chip>
+        <q-chip dense square color="teal">Joe</q-chip>
+      </div>
+
+      <p class="caption">Tag Label Chips</p>
+      <p>
+        <q-chip tag icon-right="mail" color="light" text-color="black">New</q-chip>
+        <q-chip dense tag icon-right="mail" color="light" text-color="black">New</q-chip>
+      </p>
+      <p>
+        <q-chip tag closable color="red">Upcoming</q-chip>
+        <q-chip dense tag closable color="red">Upcoming</q-chip>
+      </p>
+      <p>
+        <q-chip tag square color="primary">Featured</q-chip>
+        <q-chip dense tag square color="primary">Featured</q-chip>
+      </p>
+
+      <p class="caption">Pointing Label Chips</p>
+      <p>
+        <q-chip pointing="up" color="primary">1</q-chip>
+        <q-chip pointing="down" color="primary">2</q-chip>
+        <q-chip pointing="right" color="primary">3</q-chip>
+        <q-chip pointing="left" color="primary">4</q-chip>
+      </p>
+      <p>
+        <q-chip pointing="up" color="primary">Pointing Up</q-chip>
+        <q-chip pointing="down" color="primary">Pointing Down</q-chip>
+        <q-chip pointing="right" color="primary">Pointing Right</q-chip>
+        <q-chip pointing="left" color="primary">Pointing Left</q-chip>
+      </p>
+      <p>
+        <q-chip dense pointing="up" color="primary">Pointing Up</q-chip>
+        <q-chip dense pointing="down" color="primary">Pointing Down</q-chip>
+        <q-chip dense pointing="right" color="primary">Pointing Right</q-chip>
+        <q-chip dense pointing="left" color="primary">Pointing Left</q-chip>
+      </p>
+      <p>
+        <q-chip square pointing="up" color="primary">Pointing Up</q-chip>
+        <q-chip square pointing="down" color="primary">Pointing Down</q-chip>
+        <q-chip square pointing="right" color="primary">Pointing Right</q-chip>
+        <q-chip square pointing="left" color="primary">Pointing Left</q-chip>
+      </p>
+      <p>
+        <q-chip dense square pointing="up" color="primary">Pointing Up</q-chip>
+        <q-chip dense square pointing="down" color="primary">Pointing Down</q-chip>
+        <q-chip dense square pointing="right" color="primary">Pointing Right</q-chip>
+        <q-chip dense square pointing="left" color="primary">Pointing Left</q-chip>
+      </p>
+
+      <p class="caption">With Icons</p>
+      <p>
+        <q-chip icon="mail" color="primary">
+          10
+        </q-chip>
+        <q-chip icon-right="mail" color="tertiary">
+          10
+        </q-chip>
+      </p>
+      <p>
+        <q-chip dense square icon="mail" color="primary">
+          10
+        </q-chip>
+        <q-chip dense square icon-right="mail" color="tertiary">
+          10
+        </q-chip>
+      </p>
+
+      <p class="caption">With Detail</p>
+      <p>
+        <q-chip detail icon="mail">Detail</q-chip>
+        <q-chip detail square icon="mail">Detail</q-chip>
+        <q-chip detail square dense icon="mail">Detail</q-chip>
+      </p>
+    </div>
+  </q-page>
+</template>
+
+<style lang="stylus">
+.docs-chip
+  .q-chip
+    margin 5px
+  .q-btn .q-chip
+    margin initial
+</style>
